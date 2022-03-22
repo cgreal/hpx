@@ -65,22 +65,6 @@ const ListingFromLocalStorage = ({ data, page, setSortedNewList }) => {
   const voteChangeHandler = (event, index) => {
     event.preventDefault();
     console.log(event.target.name);
-    // const addToCart = (product) => {
-    //   let newCart = [...cart];
-    //   let itemInCart = newCart.find(
-    // 	  (item) => product.name === item.name
-    //   );
-    //   if (itemInCart) {
-    // 	  itemInCart.quantity++;
-    //   } else {
-    // 	  itemInCart = {
-    // 		  ...product,
-    // 		  quantity: 1,
-    // 	  };
-    // 	  newCart.push(itemInCart);
-    //   }
-    //   setCart(newCart);
-    // };
   };
 
   return (
