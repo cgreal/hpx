@@ -1,0 +1,48 @@
+@import '../../../assets/styles/mixins';
+
+.pagination {
+	&-wrapper {
+		align-items: center;
+		border-top: 1px solid #ddd;
+		display: flex;
+		height: 60px;
+		justify-content: center;
+		margin-top: 10px;
+		padding: 0 15px;
+		position: relative;
+	}
+	&-ul {
+		display: flex;
+		li {
+
+			button {
+				position: relative;
+				top: 1px;
+				width: 25px;
+				border-radius: 5px;
+				transition: background-color 0.2s linear;
+				&:hover {
+					background-color: #f3ab54;
+					color: #ffffff;
+				}
+			}
+			.icons {
+				font-size: 18px;
+			}
+			&.active {
+				position: relative;
+				&:after {
+					left: 0;
+					background-color: #f3ab54;
+					border-radius: 10px;
+					bottom: -2px;
+					content: '';
+					display: block;
+					height: 4px;
+					position: absolute;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

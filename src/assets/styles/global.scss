@@ -1,0 +1,233 @@
+@import './mixins';
+@import '../../../node_modules/bootstrap/scss/tables';
+@import '../fonts/icomoon/style.css';
+
+html {
+	font-family: sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: transparent;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	background-color: #efefef;
+	color: #000;
+	font-family: averta, sans-serif;
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 400;
+	line-height: 1.42857143;
+	margin: 0;
+	min-height: 100vh;
+	padding: 0;
+}
+
+.icons {
+	line-height: 1.42857143;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+	-webkit-appearance: none;
+	color: #000;
+	font-family: averta, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	margin: 0;
+}
+
+textarea {
+	resize: none;
+}
+
+small {
+	font-size: 12px;
+}
+
+.input,
+textarea,
+input[type='text']{
+	border: solid 1px #999;
+	border-radius: 5px;
+	font-size: 14px;
+	padding: 7px 10px;
+	transition: border-color 0.2s linear, box-shadow 0.2s linear;
+	width: 100%;
+
+	&:hover {
+		border-color: #000;
+	}
+	&::placeholder {
+		color: #999;
+	}
+	&:focus {
+		border-color: #000;
+		box-shadow: 0 0 0 2px #ddd;
+		outline: none;
+	}
+}
+.input,
+select,
+textarea,
+input[type='text'] {
+	&.has-icon {
+		padding-left: 36px;
+		&:hover:not(:disabled),
+		&:focus:not(:disabled) {
+			& + .icons {
+				color: #000;
+			}
+		}
+		& + .icons {
+			align-items: center;
+			cursor: pointer;
+			display: inline-flex;
+			font-size: 16px;
+			height: 36px;
+			justify-content: center;
+			left: 0;
+			pointer-events: none;
+			position: absolute;
+			transition: color 0.3s linear;
+			width: 36px;
+			color: #999;
+		}
+	}
+}
+
+select {
+	background-color: #fff;
+	color: #ec8a0c;
+	border: solid 1px #999;
+	border-radius: 5px;
+	font-size: 14px;
+	padding: 7px 25px 7px 10px;
+	transition: border-color 0.2s, box-shadow 0.2s linear;
+	width: 100%;
+	z-index: 2;
+	&:hover {
+		border-color: #000;
+	}
+	&:focus {
+		box-shadow: 0 0 0 2px #ddd;
+		outline: none;
+	}
+}
+.selectbox{
+	position: relative;
+	.icon {
+		position: absolute;
+		right: 10px;
+		top: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		padding-left: 8px;
+		border-left: 1px solid #c4c4c4;
+	}
+}
+
+button {
+	background: none;
+	border: 0;
+	cursor: pointer;
+	font-size: inherit;
+	line-height: 1.42857143;
+	padding: 0;
+	&:focus {
+		outline: 0;
+	}
+	.pointer-event-none {
+		pointer-events: none;
+	}
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+.container,
+.relative {
+	position: relative;
+}
+
+:focus {
+	outline: 0;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	main {
+		flex-grow: 1;
+		z-index: 2;
+	}
+}
+
+.col {
+	min-width: auto; // a fix for new Bootstrap versions (+4.5.x)
+}
+
+hr {
+	border: 0;
+	border-bottom: 1px solid #ddd;
+	margin: 15px 0;
+	&.light-gray {
+		border-bottom-color: #efefef;
+	}
+}
+
+body {
+	&.is-modal {
+		overflow: hidden;
+
+		.header {
+			position: inherit;
+			z-index: 1;
+		}
+	}
+}
+
+strong {
+	font-weight: 900;
+}
+
+@import './ui';

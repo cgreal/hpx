@@ -1,0 +1,30 @@
+.toaster{
+	&-container {
+		position: absolute;
+		opacity: 1;
+		transition: opacity .2s linear;
+		&.fade-out {
+			opacity: 0;
+		}
+		.success,
+		.error {
+			padding: 15px;
+			font-weight: 700;
+			font-size: 20px;
+			z-index: 1;
+			border-radius: 5px;
+			width: 200px;
+		}
+		.success {
+			background: #e4ffd6;
+			color: #75af4a;
+			border: 1px solid #62a821;
+		}
+		.error {
+			background: #f6695a;
+			color: #fab2ac;
+			border: 1px solid #b91201;
+		}
+	}
+
+}

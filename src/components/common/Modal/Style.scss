@@ -1,0 +1,110 @@
+@import '../../../assets/styles/mixins';
+
+.modal {
+	&-container {
+		bottom: 0;
+		display: flex;
+		left: 0;
+		outline: 0;
+		overflow-x: hidden;
+		overflow-y: auto;
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 200;
+		&.long {
+			// long content goes here
+		}
+		&.center {
+			align-items: center;
+		}
+	}
+	&-overlay {
+		animation: fadeInBg 0.15s linear forwards;
+		background-color: #000;
+		bottom: 0;
+		left: 0;
+		opacity: 0;
+		pointer-events: none;
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 2;
+	}
+	&-dialog {
+		margin: 0 auto;
+		padding: 0 15px;
+		pointer-events: none;
+		position: relative;
+		width: 100%;
+		@include media-breakpoint-up(md) {
+			margin: 0 auto;
+		}
+		@include media-breakpoint-up(lg) {
+			padding: 0;
+		}
+	}
+	&-content {
+		background-color: #ffffff;
+		border-radius: 10px;
+		margin: 30px auto 100px;
+		padding: 15px;
+		pointer-events: auto;
+		position: relative;
+		text-align: left;
+		width: 100%;
+		z-index: 3;
+
+		@include media-breakpoint-up(lg) {
+			margin: 30px auto;
+		}
+		&.slidefromup {
+			animation: slideFromUp 0.3s ease-in forwards;
+			animation-delay: 0.15s;
+			opacity: 0;
+			transform: translate(0, -10%);
+		}
+	}
+	&-header {
+		.modal-title {
+			border-bottom: 1px solid #c4c4c4;
+			padding: 0 0 15px;
+			font-size: 18px;
+			margin-bottom: 15px;
+		}
+	}
+	&-wrapper {
+		border: 1px solid transparent;
+		@include media-breakpoint-up(lg) {
+			border: none;
+		}
+	}
+	&-body {
+		// if necessary, modal body rules go here
+	}
+	&-description {
+		font-size: 30px;
+		font-weight: bold;
+		text-align: center;
+	}
+}
+
+@keyframes slideFromUp {
+	0% {
+		transform: translate(0, -10%);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInBg {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.5;
+	}
+}

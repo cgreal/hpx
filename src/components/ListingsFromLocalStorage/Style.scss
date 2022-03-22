@@ -1,0 +1,57 @@
+.listing-wrapper {
+	.title {
+		font-size: 24px;
+		font-weight: bolder;
+	}
+	.link{
+		color:#555555;
+	}
+	.vote {
+		border: 1px solid #efefef;
+		border-radius: 5px;
+		padding: 15px;
+		font-size: 24px;
+		min-width: 80px;
+		font-weight: bolder;
+
+		&-title{
+			font-weight: normal;
+			font-size: 14px;
+		}
+	}
+	.down-vote {
+		color:#e74c3c;
+		transition: color .2s linear;
+		&:hover {
+			color:#e87f74;
+		}
+	}
+	.up-vote {
+		color: #d57500;
+		transition: color .2s linear;
+		&:hover {
+			color: #f3ab54;
+		}
+	}
+	.remove-btn {
+		&-wrapper {
+			position: relative;
+			z-index: 5;
+			button {
+				border: 1px solid #e74c3c;
+				border-radius: 5px;
+				color:#e74c3c;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 30px;
+				height: 30px;
+				opacity: 0;
+				transition: opacity .2s linear;
+				&:hover {
+					box-shadow: 0 0 10px #ccc;
+				}
+			}
+		}
+	}
+}
